@@ -57,6 +57,18 @@
                      </div>
                 </div>
                 <div class="row">
+                    <div class="col-6">
+                        <label for="">Category</label>
+                        <select [(ngModel)]="productObj.categoryId" class="form-select">
+                            <option *ngFor="let cate of categoryList" [value]="cate.categoryId">{{cate.categoryName}}</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <label for="">Delivery Time Span</label>
+                        <input type="" [(ngModel)]="productObj.deliveryTimeSpan" class="form-control"/>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-12">
                         <label for="">Image URL</label>
                         <input type="text" name="productImageUrl" [(ngModel)]="productObj.productImageUrl" class="form-control"/>
