@@ -1,1 +1,17 @@
-<p>login works!</p>
+<div class="parent">
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form>
+        <h3>Login Here</h3>
+
+        <label for="username">Username</label>
+        <input type="text" name="userName" [(ngModel)]="loginObj.userName"  placeholder="Email or Phone" id="username">
+
+        <label for="password">Password</label>
+        <input type="password" name="password" [(ngModel)]="loginObj.password" placeholder="Password" id="password">
+
+        <button type="button" (click)="onLogin()">Log In</button>
+    </form>
+</div>
