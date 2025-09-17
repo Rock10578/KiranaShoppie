@@ -10,7 +10,6 @@ import { Product } from '../../../services/product/product';
   styleUrl: './products.css'
 })
 export class Products implements OnInit{
-
   isSidePanelVisible: boolean=false;
   productObj: any = {
     "productId": 0,
@@ -20,16 +19,14 @@ export class Products implements OnInit{
     "productShortName": "",
     "productDescription": "",
     "createdDate": new Date(),
-    "deliveryTimeSpan": new Date(),
-    "categoryId": 2147483647,
+    "deliveryTimeSpan": "",
+    "categoryId": 0,
     "productImageUrl": "",
     "uerId": 0
   }
 
   categoryList: any [] = [];
-  constructor(private productSrv: Product) {
-
-  }
+  constructor(private productSrv: Product) { }
 
   ngOnInit(): void {
     this.getAllCategory()

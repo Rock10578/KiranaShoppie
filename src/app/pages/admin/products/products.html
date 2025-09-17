@@ -12,17 +12,52 @@
                 </div>
             </div>
             <div class="card-body">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="..." class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="..." class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="..." class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="..." class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="col-4" *ngIf="isSidePanelVisible">
         <div class="card">
             <div class="card-header bg-primary">
@@ -49,11 +84,11 @@
                 <div class="row">
                     <div class="col-6">
                         <label for="">Short Name</label>
-                        <input type="text" name="productShortName" [(ngModel)]="productObj.productShortName" class="form-control"/>
+                        <input type="text" [(ngModel)]="productObj.productShortName" class="form-control"/>
                      </div>
                     <div class="col-6">
                         <label for="">Price</label>
-                        <input type="text" name="productPrice" [(ngModel)]="productObj.productPrice" class="form-control"/>
+                        <input type="text" [(ngModel)]="productObj.productPrice" class="form-control"/>
                      </div>
                 </div>
                 <div class="row">
@@ -71,13 +106,13 @@
                 <div class="row">
                     <div class="col-12">
                         <label for="">Image URL</label>
-                        <input type="text" name="productImageUrl" [(ngModel)]="productObj.productImageUrl" class="form-control"/>
+                        <input type="text" [(ngModel)]="productObj.productImageUrl" class="form-control"/>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <label for="">Product Description</label>
-                        <input type="text" name="productDescription" [(ngModel)]="productObj.productDescription" class="form-control py-5"/>
+                        <textarea rows="4" type="text" [(ngModel)]="productObj.productDescription" class="form-control py-5"></textarea>
                     </div>
                 </div>
             </div>

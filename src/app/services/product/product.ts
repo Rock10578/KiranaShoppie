@@ -6,7 +6,7 @@ import { Constant } from '../constant/constant';
   providedIn: 'root'
 })
 export class Product {
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient){ }
 
   getCategory() {
     return this.http.get(Constant.API_END_POINT + Constant.METHODS.GET_ALL_CATEGORY)
