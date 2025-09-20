@@ -60,6 +60,9 @@
             },
             "development": {
               "buildTarget": "KiranaShoppie:build:development"
+            },
+            "options": {
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
