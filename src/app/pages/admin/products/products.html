@@ -13,46 +13,27 @@
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3" *ngFor="let prod of productsList">
                         <div class="card">
-                            <img src="..." class="card-img-top" alt="Card Image">
+                            <img [src]="prod.productImageUrl" class="card-img-top" alt="Card Image">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <h5 class="card-title">{{prod.productName}}</h5>
+                                <p class="card-text">{{prod.categoryName}}</p>
+                                <p class="card-text">{{prod.productShortName}}</p>
+                                <a class="btn btn-primary" (click)="onEdit(prod)">Edit</a>
+                                <a class="btn btn-danger mx-2">Delete</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <!-- <div class="col-3">
                         <div class="card">
                             <img src="..." class="card-img-top" alt="Card Image">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <h5 class="card-title">title</h5>
+                                <p class="card-text">category</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="Card Image">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="Card Image">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -112,7 +93,17 @@
                 <div class="row">
                     <div class="col-12">
                         <label for="">Product Description</label>
-                        <textarea rows="4" type="text" [(ngModel)]="productObj.productDescription" class="form-control py-5"></textarea>
+                        <textarea rows="5" type="text" [(ngModel)]="productObj.productDescription" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="row text-center pt-2">
+                    <div class="col-6">
+                        <button class="btn btn-danger" *ngIf="productObj.productId == 0">Reset</button>
+                        <button class="btn btn-danger" *ngIf="productObj.productId != 0">Delete</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-success" *ngIf="productObj.productId == 0" (click)="onSave()">Create Product</button>
+                        <button class="btn btn-success" *ngIf="productObj.productId != 0" (click)="onSave()">Update</button>
                     </div>
                 </div>
             </div>

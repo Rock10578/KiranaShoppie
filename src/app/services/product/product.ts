@@ -31,4 +31,12 @@ export class Product {
     */
     return this.http.get('/api/BigBasket/' + Constant.METHODS.GET_ALL_CATEGORY);
   }
+
+  saveProduct(obj: any) {
+    return this.http.post('/api/BigBasket/' + Constant.METHODS.CREATE_PRODUCT, obj);
+  }
+
+  getProducts() {
+    return this.http.get('/api/BigBasket/' + Constant.METHODS.GET_ALL_PRODUCT);
+  }
 }
