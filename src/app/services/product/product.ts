@@ -39,4 +39,8 @@ export class Product {
   getProducts() {
     return this.http.get('/api/BigBasket/' + Constant.METHODS.GET_ALL_PRODUCT);
   }
+
+  updateProduct(item: any) {
+    return this.http.post('/api/BigBasket/' + Constant.METHODS.UPDATE_PRODUCT, item);
+  }
 }

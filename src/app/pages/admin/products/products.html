@@ -103,7 +103,7 @@
                     </div>
                     <div class="col-6">
                         <button class="btn btn-success" *ngIf="productObj.productId == 0" (click)="onSave()">Create Product</button>
-                        <button class="btn btn-success" *ngIf="productObj.productId != 0" (click)="onSave()">Update</button>
+                        <button class="btn btn-success" *ngIf="productObj.productId != 0" (click)="onUpdate(productObj)">Update</button>
                     </div>
                 </div>
             </div>

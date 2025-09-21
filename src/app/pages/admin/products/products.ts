@@ -72,4 +72,18 @@ export class Products implements OnInit{
     this.openSidePanel()
   }
 
+  onUpdate(item: any){
+    this.productSrv.updateProduct(item).subscribe((res: any) => {
+      debugger;
+      if(res.result) {
+        alert("Product updated");
+        this.getAllProducts();
+      } else {
+        alert(res.message)
+      }
+      
+    })
+
+  }
+
 }
